@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4da1a9;
+  }
+  
+  .header {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .container {
+    margin-top: 40px;
+    width: 500px;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  #formulario {
+
+  }
+  
+  .values {
+    margin-top: 10px;
+  }
+  
+  .linesNumber {
+    display: inline;
+    vertical-align: middle;
+  }
+  
+  .formControl {
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+  }
+  
+  #numberForm {
+    padding: 10px;
+    width: 40px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    text-align: center;
+  }
+  
+  #price{
+      width: 100px;
+  }
+  
+  .submit {
+    margin-left: 55px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(14, 168, 96) ;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .submit:hover{
+      background-color: rgb(12, 112, 79);
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  

@@ -6,14 +6,15 @@
 
 body {
   display: flex;
+  flex-direction:column;
   justify-content: center;
+  align-items: center;
   background-color: #4da1a9;
 }
 
 .header {
-  display: block;
   justify-content: center;
-  position: absolute;
+  margin-top: 20px;
 }
 
 .container {
@@ -24,9 +25,9 @@ body {
   border-radius: 15px;
 }
 
-#formulario {
-  display: block;
-}
+/*#formulario {
+
+}*/
 
 .values {
   margin-top: 10px;
@@ -37,14 +38,19 @@ body {
   vertical-align: middle;
 }
 
-.formControl {
+.valor {
+  display: inline;
+  vertical-align: middle;
+}
+
+#produto {
   width: 400px;
   border-radius: 5px;
   border: 1px solid #ced4da;
   padding: 10px;
 }
 
-.numberForm {
+#quantidade {
   padding: 10px;
   width: 40px;
   border-radius: 5px;
@@ -52,8 +58,12 @@ body {
   text-align: center;
 }
 
-#price{
-    width: 100px;
+#preco{
+  padding: 10px;
+  width: 100px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  text-align: center;
 }
 
 .submit {
