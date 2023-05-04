@@ -1,7 +1,7 @@
-/*$(function () {
+$(function () {
     $('#preco').mask('000.000.000.000.000,00', { reverse: true });
 })
-*/
+
 // Trecho do código referente ao LocalStorage
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_orcamentos')) ?? []
 
@@ -39,7 +39,7 @@ const clearFields = () => {
 }
 
 const saveBudget = () => {
-    debugger
+    
     if (isValidFields()) {
         const budgetnew = {
             produto: document.getElementById('produto').value,
@@ -59,7 +59,7 @@ const saveBudget = () => {
 
 const createRow = (budgetnew, index) => {
     const newRow = document.createElement('tr')
-    newRow.innetHTML = `
+    newRow.innerHTML = `
     <td>${budgetnew.produto}</td>
     <td>${budgetnew.quantidade}</td>
     <td>${budgetnew.preco}</td>
@@ -88,8 +88,8 @@ const fillFields = (budgetnew) => {
     document.getElementById('preco').value = budgetnew.preco
 }
 
-const editBudget = () => {
-    const budgetnew = readBudget() [index]
+const editBudget = (index) => {
+    const budgetnew = readBudget()[index]
     budgetnew.index = index
     fillFields(budgetnew)
 }
@@ -103,7 +103,7 @@ const editDelete = (event) => {
             editBudget(index)
         } else {
             const budgetnew = readBudget()[index]
-            let avisoDelete = document.querySelectorAll('#avisoDelete')
+            let avisoDelete = document.querySelector('#avisoDelete')
 
             avisoDelete.textContent = `Deseja realmente excluir o produto ${budgetnew.produto}`
 
@@ -120,5 +120,3 @@ updateTable()
 
 
 document.getElementById('salvar').addEventListener('click', saveBudget)
-
-

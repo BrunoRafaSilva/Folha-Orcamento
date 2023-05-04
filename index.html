@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="Styles/style.css">
     <script src="Scripts/jquery-3.6.4.js"></script>
     <script src="Scripts/jquery.mask.js"></script>
-    <script src="Scripts/script.js"></script>
     <title>Gerador De Folha Orçamentaria 1.0</title>
 </head>
 
@@ -23,8 +22,8 @@
 
         <form id="formulario">
             <div>
-                <label for="produto">Produto</label>
-                <input type="text" placeholder="Digite o produto aqui" class="modal-field" id="produto" required>
+                <label>Produto</label>
+                <input type="text" placeholder="Digite o produto aqui" class="modal-field" id="produto" data-index="new" required>
             </div>
 
             <div class="values">
@@ -41,13 +40,13 @@
 
 
                 <div class="linesNumber">
-                    <button type="submit" class="submit">Inserir</button>
+                    <button class="salvar" id="salvar">Inserir</button>
 
                 </div>
             </div>
         </form>
-        <div class="col-10 mt-5">
-            <table id="tableClient" class="tableSyle">
+        <div class="tabelosa">
+            <table id="tableBudget" class="tableSyle">
                 <thead>
                     <tr>
                         <th>Produto</th>
@@ -56,7 +55,7 @@
                         <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody class="student-list">
+                <tbody>
                 
                 </tbody>
             </table>
@@ -65,5 +64,5 @@
     </div>
 
 </body>
-
+<script type="module" src="Scripts/scrip2.js"></script>
 </html>
